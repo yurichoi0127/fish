@@ -82,7 +82,7 @@ with st.sidebar:
         "🔮 가상 아쿠아리움"
     ], label_visibility="collapsed")
     st.divider()
-    st.caption("© 2026 AquaLife Balancer")
+    st.caption("© 2026 My Fish Tank")
 
 st.title("🐠 나만의 열대어 키우기")
 st.markdown("---")
