@@ -82,7 +82,7 @@ with st.sidebar:
         "🔮 가상 아쿠아리움"
     ], label_visibility="collapsed")
     st.divider()
-    st.caption("© 2026 My Fish Tank")
+    st.caption("© 2026 My Tropical Fish Tank")
 
 st.title("🐠 나만의 열대어 키우기")
 st.markdown("---")
@@ -199,7 +199,6 @@ elif menu == "📖 열대어 도감":
                         with c2:
                             if st.button("🗑️ 삭제", key=f"del_{name}_{idx}", type="primary", use_container_width=True):
                                 st.session_state.db_fishes = st.session_state.db_fishes.drop(idx).reset_index(drop=True)
-                                st.session_state.db_fishes.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
                                 
                                
                                 if name in st.session_state.my_fishes:
@@ -276,7 +275,6 @@ elif menu == "📖 열대어 도감":
                 }])
                 
                 st.session_state.db_fishes = pd.concat([st.session_state.db_fishes, new_row], ignore_index=True)
-                st.session_state.db_fishes.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
                 st.success(f"🎉 {new_name} 도감에 열대어가 나만의 데이터로 안전하게 추가되었습니다!")
                 st.rerun()
 
